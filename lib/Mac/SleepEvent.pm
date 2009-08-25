@@ -25,8 +25,13 @@ Mac::SleepEvent - run Perl code on Mac OS X sleep and wake events
 
 Mac::SleepEvent provides callbacks to run code when Mac OS X 
 goes to sleep, wakes up, or logs out (same as shutdown). When
-the listen method is called, the program will enter a permanent
+the listen method is called, the program will enter a run
 loop, awaiting events from the OS.
+
+=head1 CAVEATS
+
+Mac::SleepEvent requires the Foundation module, which is only
+included with the OS X system perl.
 
 =head1 METHODS
 
